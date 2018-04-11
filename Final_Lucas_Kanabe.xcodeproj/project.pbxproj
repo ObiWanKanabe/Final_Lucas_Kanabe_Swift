@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C466764B207EA4D500416C52 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667644207EA4D500416C52 /* FirebaseInstanceID.framework */; };
+		C466764C207EA4D500416C52 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667645207EA4D500416C52 /* FirebaseCoreDiagnostics.framework */; };
+		C466764D207EA4D500416C52 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667646207EA4D500416C52 /* GoogleToolboxForMac.framework */; };
+		C466764E207EA4D500416C52 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667647207EA4D500416C52 /* nanopb.framework */; };
+		C466764F207EA4D500416C52 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667648207EA4D500416C52 /* FirebaseAnalytics.framework */; };
+		C4667650207EA4D500416C52 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667649207EA4D500416C52 /* FirebaseCore.framework */; };
+		C4667651207EA4D500416C52 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C466764A207EA4D500416C52 /* FirebaseNanoPB.framework */; };
+		C4667654207EA4DD00416C52 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667652207EA4DD00416C52 /* leveldb-library.framework */; };
+		C4667655207EA4DD00416C52 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4667653207EA4DD00416C52 /* FirebaseDatabase.framework */; };
 		C46BEA16207E9F7100BB1712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA15207E9F7100BB1712 /* AppDelegate.swift */; };
 		C46BEA18207E9F7100BB1712 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA17207E9F7100BB1712 /* GameScene.sks */; };
 		C46BEA1A207E9F7100BB1712 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA19207E9F7100BB1712 /* Actions.sks */; };
@@ -17,6 +26,12 @@
 		C46BEA26207E9F7100BB1712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */; };
 		C46BEA31207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA30207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift */; };
 		C46BEA3C207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */; };
+		C46BEA4E207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
+		C46BEA4F207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
+		C46BEA50207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
+		C4E668DF207EA45000B2CD53 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668DE207EA45000B2CD53 /* libicucore.tbd */; };
+		C4E668E1207EA46000B2CD53 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668E0207EA46000B2CD53 /* StoreKit.framework */; };
+		C4E668E3207EA46F00B2CD53 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668E2207EA46F00B2CD53 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4667644207EA4D500416C52 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		C4667645207EA4D500416C52 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		C4667646207EA4D500416C52 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		C4667647207EA4D500416C52 /* nanopb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = nanopb.framework; sourceTree = "<group>"; };
+		C4667648207EA4D500416C52 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = ../../Downloads/Firebase/Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		C4667649207EA4D500416C52 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		C466764A207EA4D500416C52 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		C4667652207EA4DD00416C52 /* leveldb-library.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "leveldb-library.framework"; sourceTree = "<group>"; };
+		C4667653207EA4DD00416C52 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
 		C46BEA12207E9F7100BB1712 /* Final_Lucas_Kanabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Final_Lucas_Kanabe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46BEA15207E9F7100BB1712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46BEA17207E9F7100BB1712 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -53,6 +77,10 @@
 		C46BEA37207E9F7100BB1712 /* Final_Lucas_KanabeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Final_Lucas_KanabeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Lucas_KanabeUITests.swift; sourceTree = "<group>"; };
 		C46BEA3D207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4E668DE207EA45000B2CD53 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C4E668E0207EA46000B2CD53 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C4E668E2207EA46F00B2CD53 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +88,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4667655207EA4DD00416C52 /* FirebaseDatabase.framework in Frameworks */,
+				C466764F207EA4D500416C52 /* FirebaseAnalytics.framework in Frameworks */,
+				C4E668E3207EA46F00B2CD53 /* libsqlite3.tbd in Frameworks */,
+				C4667650207EA4D500416C52 /* FirebaseCore.framework in Frameworks */,
+				C4E668E1207EA46000B2CD53 /* StoreKit.framework in Frameworks */,
+				C466764C207EA4D500416C52 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				C466764E207EA4D500416C52 /* nanopb.framework in Frameworks */,
+				C466764D207EA4D500416C52 /* GoogleToolboxForMac.framework in Frameworks */,
+				C4667651207EA4D500416C52 /* FirebaseNanoPB.framework in Frameworks */,
+				C4E668DF207EA45000B2CD53 /* libicucore.tbd in Frameworks */,
+				C4667654207EA4DD00416C52 /* leveldb-library.framework in Frameworks */,
+				C466764B207EA4D500416C52 /* FirebaseInstanceID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +127,7 @@
 				C46BEA2F207E9F7100BB1712 /* Final_Lucas_KanabeTests */,
 				C46BEA3A207E9F7100BB1712 /* Final_Lucas_KanabeUITests */,
 				C46BEA13207E9F7100BB1712 /* Products */,
+				C4E668DD207EA45000B2CD53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +153,7 @@
 				C46BEA22207E9F7100BB1712 /* Assets.xcassets */,
 				C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */,
 				C46BEA27207E9F7100BB1712 /* Info.plist */,
+				C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */,
 			);
 			path = Final_Lucas_Kanabe;
 			sourceTree = "<group>";
@@ -132,6 +174,25 @@
 				C46BEA3D207E9F7100BB1712 /* Info.plist */,
 			);
 			path = Final_Lucas_KanabeUITests;
+			sourceTree = "<group>";
+		};
+		C4E668DD207EA45000B2CD53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4667653207EA4DD00416C52 /* FirebaseDatabase.framework */,
+				C4667652207EA4DD00416C52 /* leveldb-library.framework */,
+				C4667648207EA4D500416C52 /* FirebaseAnalytics.framework */,
+				C4667649207EA4D500416C52 /* FirebaseCore.framework */,
+				C4667645207EA4D500416C52 /* FirebaseCoreDiagnostics.framework */,
+				C4667644207EA4D500416C52 /* FirebaseInstanceID.framework */,
+				C466764A207EA4D500416C52 /* FirebaseNanoPB.framework */,
+				C4667646207EA4D500416C52 /* GoogleToolboxForMac.framework */,
+				C4667647207EA4D500416C52 /* nanopb.framework */,
+				C4E668E2207EA46F00B2CD53 /* libsqlite3.tbd */,
+				C4E668E0207EA46000B2CD53 /* StoreKit.framework */,
+				C4E668DE207EA45000B2CD53 /* libicucore.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +307,7 @@
 				C46BEA23207E9F7100BB1712 /* Assets.xcassets in Resources */,
 				C46BEA26207E9F7100BB1712 /* LaunchScreen.storyboard in Resources */,
 				C46BEA1A207E9F7100BB1712 /* Actions.sks in Resources */,
+				C46BEA4E207EA15400BB1712 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46BEA4F207EA15400BB1712 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46BEA50207EA15400BB1712 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +503,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+				);
 				INFOPLIST_FILE = Final_Lucas_Kanabe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-Kanabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -453,8 +535,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+					"$(PROJECT_DIR)/New\\ Group",
+				);
 				INFOPLIST_FILE = Final_Lucas_Kanabe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-Kanabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
