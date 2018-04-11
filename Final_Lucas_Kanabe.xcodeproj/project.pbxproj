@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C46BEA16207E9F7100BB1712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA15207E9F7100BB1712 /* AppDelegate.swift */; };
+		C46BEA18207E9F7100BB1712 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA17207E9F7100BB1712 /* GameScene.sks */; };
+		C46BEA1A207E9F7100BB1712 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA19207E9F7100BB1712 /* Actions.sks */; };
+		C46BEA1C207E9F7100BB1712 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA1B207E9F7100BB1712 /* GameScene.swift */; };
+		C46BEA1E207E9F7100BB1712 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA1D207E9F7100BB1712 /* GameViewController.swift */; };
+		C46BEA21207E9F7100BB1712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA1F207E9F7100BB1712 /* Main.storyboard */; };
+		C46BEA23207E9F7100BB1712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA22207E9F7100BB1712 /* Assets.xcassets */; };
+		C46BEA26207E9F7100BB1712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */; };
+		C46BEA31207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA30207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift */; };
+		C46BEA3C207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C46BEA2D207E9F7100BB1712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C46BEA0A207E9F7100BB1712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46BEA11207E9F7100BB1712;
+			remoteInfo = Final_Lucas_Kanabe;
+		};
+		C46BEA38207E9F7100BB1712 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C46BEA0A207E9F7100BB1712 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C46BEA11207E9F7100BB1712;
+			remoteInfo = Final_Lucas_Kanabe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C46BEA12207E9F7100BB1712 /* Final_Lucas_Kanabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Final_Lucas_Kanabe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46BEA15207E9F7100BB1712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C46BEA17207E9F7100BB1712 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C46BEA19207E9F7100BB1712 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		C46BEA1B207E9F7100BB1712 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C46BEA1D207E9F7100BB1712 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C46BEA20207E9F7100BB1712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C46BEA22207E9F7100BB1712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C46BEA25207E9F7100BB1712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C46BEA27207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46BEA2C207E9F7100BB1712 /* Final_Lucas_KanabeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Final_Lucas_KanabeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46BEA30207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Lucas_KanabeTests.swift; sourceTree = "<group>"; };
+		C46BEA32207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46BEA37207E9F7100BB1712 /* Final_Lucas_KanabeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Final_Lucas_KanabeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Lucas_KanabeUITests.swift; sourceTree = "<group>"; };
+		C46BEA3D207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C46BEA0F207E9F7100BB1712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA29207E9F7100BB1712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA34207E9F7100BB1712 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C46BEA09207E9F7100BB1712 = {
+			isa = PBXGroup;
+			children = (
+				C46BEA14207E9F7100BB1712 /* Final_Lucas_Kanabe */,
+				C46BEA2F207E9F7100BB1712 /* Final_Lucas_KanabeTests */,
+				C46BEA3A207E9F7100BB1712 /* Final_Lucas_KanabeUITests */,
+				C46BEA13207E9F7100BB1712 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C46BEA13207E9F7100BB1712 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C46BEA12207E9F7100BB1712 /* Final_Lucas_Kanabe.app */,
+				C46BEA2C207E9F7100BB1712 /* Final_Lucas_KanabeTests.xctest */,
+				C46BEA37207E9F7100BB1712 /* Final_Lucas_KanabeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C46BEA14207E9F7100BB1712 /* Final_Lucas_Kanabe */ = {
+			isa = PBXGroup;
+			children = (
+				C46BEA15207E9F7100BB1712 /* AppDelegate.swift */,
+				C46BEA17207E9F7100BB1712 /* GameScene.sks */,
+				C46BEA19207E9F7100BB1712 /* Actions.sks */,
+				C46BEA1B207E9F7100BB1712 /* GameScene.swift */,
+				C46BEA1D207E9F7100BB1712 /* GameViewController.swift */,
+				C46BEA1F207E9F7100BB1712 /* Main.storyboard */,
+				C46BEA22207E9F7100BB1712 /* Assets.xcassets */,
+				C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */,
+				C46BEA27207E9F7100BB1712 /* Info.plist */,
+			);
+			path = Final_Lucas_Kanabe;
+			sourceTree = "<group>";
+		};
+		C46BEA2F207E9F7100BB1712 /* Final_Lucas_KanabeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C46BEA30207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift */,
+				C46BEA32207E9F7100BB1712 /* Info.plist */,
+			);
+			path = Final_Lucas_KanabeTests;
+			sourceTree = "<group>";
+		};
+		C46BEA3A207E9F7100BB1712 /* Final_Lucas_KanabeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */,
+				C46BEA3D207E9F7100BB1712 /* Info.plist */,
+			);
+			path = Final_Lucas_KanabeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C46BEA11207E9F7100BB1712 /* Final_Lucas_Kanabe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46BEA40207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_Kanabe" */;
+			buildPhases = (
+				C46BEA0E207E9F7100BB1712 /* Sources */,
+				C46BEA0F207E9F7100BB1712 /* Frameworks */,
+				C46BEA10207E9F7100BB1712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Final_Lucas_Kanabe;
+			productName = Final_Lucas_Kanabe;
+			productReference = C46BEA12207E9F7100BB1712 /* Final_Lucas_Kanabe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C46BEA2B207E9F7100BB1712 /* Final_Lucas_KanabeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46BEA43207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_KanabeTests" */;
+			buildPhases = (
+				C46BEA28207E9F7100BB1712 /* Sources */,
+				C46BEA29207E9F7100BB1712 /* Frameworks */,
+				C46BEA2A207E9F7100BB1712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C46BEA2E207E9F7100BB1712 /* PBXTargetDependency */,
+			);
+			name = Final_Lucas_KanabeTests;
+			productName = Final_Lucas_KanabeTests;
+			productReference = C46BEA2C207E9F7100BB1712 /* Final_Lucas_KanabeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C46BEA36207E9F7100BB1712 /* Final_Lucas_KanabeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C46BEA46207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_KanabeUITests" */;
+			buildPhases = (
+				C46BEA33207E9F7100BB1712 /* Sources */,
+				C46BEA34207E9F7100BB1712 /* Frameworks */,
+				C46BEA35207E9F7100BB1712 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C46BEA39207E9F7100BB1712 /* PBXTargetDependency */,
+			);
+			name = Final_Lucas_KanabeUITests;
+			productName = Final_Lucas_KanabeUITests;
+			productReference = C46BEA37207E9F7100BB1712 /* Final_Lucas_KanabeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C46BEA0A207E9F7100BB1712 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Kanabe Lucas A.";
+				TargetAttributes = {
+					C46BEA11207E9F7100BB1712 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C46BEA2B207E9F7100BB1712 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C46BEA11207E9F7100BB1712;
+					};
+					C46BEA36207E9F7100BB1712 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C46BEA11207E9F7100BB1712;
+					};
+				};
+			};
+			buildConfigurationList = C46BEA0D207E9F7100BB1712 /* Build configuration list for PBXProject "Final_Lucas_Kanabe" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C46BEA09207E9F7100BB1712;
+			productRefGroup = C46BEA13207E9F7100BB1712 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C46BEA11207E9F7100BB1712 /* Final_Lucas_Kanabe */,
+				C46BEA2B207E9F7100BB1712 /* Final_Lucas_KanabeTests */,
+				C46BEA36207E9F7100BB1712 /* Final_Lucas_KanabeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C46BEA10207E9F7100BB1712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46BEA21207E9F7100BB1712 /* Main.storyboard in Resources */,
+				C46BEA18207E9F7100BB1712 /* GameScene.sks in Resources */,
+				C46BEA23207E9F7100BB1712 /* Assets.xcassets in Resources */,
+				C46BEA26207E9F7100BB1712 /* LaunchScreen.storyboard in Resources */,
+				C46BEA1A207E9F7100BB1712 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA2A207E9F7100BB1712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA35207E9F7100BB1712 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C46BEA0E207E9F7100BB1712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46BEA1C207E9F7100BB1712 /* GameScene.swift in Sources */,
+				C46BEA1E207E9F7100BB1712 /* GameViewController.swift in Sources */,
+				C46BEA16207E9F7100BB1712 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA28207E9F7100BB1712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46BEA31207E9F7100BB1712 /* Final_Lucas_KanabeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C46BEA33207E9F7100BB1712 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46BEA3C207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C46BEA2E207E9F7100BB1712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C46BEA11207E9F7100BB1712 /* Final_Lucas_Kanabe */;
+			targetProxy = C46BEA2D207E9F7100BB1712 /* PBXContainerItemProxy */;
+		};
+		C46BEA39207E9F7100BB1712 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C46BEA11207E9F7100BB1712 /* Final_Lucas_Kanabe */;
+			targetProxy = C46BEA38207E9F7100BB1712 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C46BEA1F207E9F7100BB1712 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46BEA20207E9F7100BB1712 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C46BEA25207E9F7100BB1712 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C46BEA3E207E9F7100BB1712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C46BEA3F207E9F7100BB1712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C46BEA41207E9F7100BB1712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_Kanabe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-Kanabe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C46BEA42207E9F7100BB1712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_Kanabe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-Kanabe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C46BEA44207E9F7100BB1712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_KanabeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-KanabeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Final_Lucas_Kanabe.app/Final_Lucas_Kanabe";
+			};
+			name = Debug;
+		};
+		C46BEA45207E9F7100BB1712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_KanabeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-KanabeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Final_Lucas_Kanabe.app/Final_Lucas_Kanabe";
+			};
+			name = Release;
+		};
+		C46BEA47207E9F7100BB1712 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_KanabeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-KanabeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Final_Lucas_Kanabe;
+			};
+			name = Debug;
+		};
+		C46BEA48207E9F7100BB1712 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Final_Lucas_KanabeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lucaskanabe.Final-Lucas-KanabeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Final_Lucas_Kanabe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C46BEA0D207E9F7100BB1712 /* Build configuration list for PBXProject "Final_Lucas_Kanabe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46BEA3E207E9F7100BB1712 /* Debug */,
+				C46BEA3F207E9F7100BB1712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46BEA40207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_Kanabe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46BEA41207E9F7100BB1712 /* Debug */,
+				C46BEA42207E9F7100BB1712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46BEA43207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_KanabeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46BEA44207E9F7100BB1712 /* Debug */,
+				C46BEA45207E9F7100BB1712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C46BEA46207E9F7100BB1712 /* Build configuration list for PBXNativeTarget "Final_Lucas_KanabeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46BEA47207E9F7100BB1712 /* Debug */,
+				C46BEA48207E9F7100BB1712 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C46BEA0A207E9F7100BB1712 /* Project object */;
+}
