@@ -15,15 +15,24 @@ class Spike: GameObject {
     }
     
     override func update() {
-        
+        position = CGPoint(x: position.x - 3, y: position.y )
     }
     
     
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         let texture = SKTexture.init(imageNamed: "spike.png")
         
-        super.init(texture: texture, color: .clear, size: CGSize(width: texture.size().width * 1.25, height: texture.size().height * 1.25))
+        super.init(texture: texture, color: .clear, size: CGSize(width: texture.size().width * 1.75, height: texture.size().height * 1.75))
         initialize()
+        
+        physicsBody = SKPhysicsBody(rectangleOf: texture.size())
+        physicsBody?.affectedByGravity = false
+        physicsBody?.isDynamic = false
+        physicsBody?.restitution = CGFloat(0)
+        physicsBody?.usesPreciseCollisionDetection = true
+        
+        physicsBody?.categoryBitMask = 2
+        physicsBody?.contactTestBitMask = 0
         
     }
     

@@ -9,18 +9,20 @@
 import Foundation
 import SpriteKit
 
-class KidFactory {
+class SpikeFactory {
     
-    func generateSpike(_position: CGPoint) {
+    static func generateSpike(_position: CGPoint) -> Spike{
         let spike = Spike()
         spike.position = _position
+        return spike
     }
     
-    func createSpikes(_position: CGPoint, _numberOfSpikes: Int) {
+    static func createSpikes(_position: CGPoint, _numberOfSpikes: Int) -> [Spike] {
+        var spikes: [Spike] = []
         for i in stride(from: 0, to: _numberOfSpikes, by: 1) {
-            generateSpike(_position: CGPoint(x: _position.x + CGFloat(i*7), y: _position.y))
+            spikes.append(generateSpike(_position: CGPoint(x: _position.x + CGFloat(i*7), y: _position.y)))
         }
+        return spikes
     }
-    
 }
 

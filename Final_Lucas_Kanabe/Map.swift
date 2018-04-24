@@ -28,9 +28,12 @@ class Map : GameObject {
         physicsBody?.restitution = CGFloat(0)
         physicsBody?.usesPreciseCollisionDetection = true
         
+        physicsBody?.categoryBitMask = 1
+        
     }
     
     override func update() {
+        position = CGPoint(x: position.x - 3, y: position.y)
     }
     
     required init?(coder aDecoder: NSCoder) {

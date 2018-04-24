@@ -62,6 +62,9 @@ class Player: GameObject {
         physicsBody?.restitution = CGFloat(0)
         physicsBody?.usesPreciseCollisionDetection = true
         
+        physicsBody?.categoryBitMask = 0
+        physicsBody?.contactTestBitMask = 2
+        
         self.run(moveAnimation.getRepeatedAction())
     }
     
