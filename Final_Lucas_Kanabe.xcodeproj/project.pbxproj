@@ -29,6 +29,9 @@
 		C46BEA4E207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
 		C46BEA4F207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
 		C46BEA50207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
+		C4C6902E208EB25800366C5B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6902D208EB25800366C5B /* Player.swift */; };
+		C4C69034208EC97F00366C5B /* SpikeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C69033208EC97F00366C5B /* SpikeFactory.swift */; };
+		C4C69036208EC98F00366C5B /* Spike.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C69035208EC98F00366C5B /* Spike.swift */; };
 		C4E668DF207EA45000B2CD53 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668DE207EA45000B2CD53 /* libicucore.tbd */; };
 		C4E668E1207EA46000B2CD53 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668E0207EA46000B2CD53 /* StoreKit.framework */; };
 		C4E668E3207EA46F00B2CD53 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E668E2207EA46F00B2CD53 /* libsqlite3.tbd */; };
@@ -78,6 +81,9 @@
 		C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Lucas_KanabeUITests.swift; sourceTree = "<group>"; };
 		C46BEA3D207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4C6902D208EB25800366C5B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C4C69033208EC97F00366C5B /* SpikeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpikeFactory.swift; sourceTree = "<group>"; };
+		C4C69035208EC98F00366C5B /* Spike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spike.swift; sourceTree = "<group>"; };
 		C4E668DE207EA45000B2CD53 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		C4E668E0207EA46000B2CD53 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C4E668E2207EA46F00B2CD53 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -154,6 +160,9 @@
 				C46BEA24207E9F7100BB1712 /* LaunchScreen.storyboard */,
 				C46BEA27207E9F7100BB1712 /* Info.plist */,
 				C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */,
+				C4C6902D208EB25800366C5B /* Player.swift */,
+				C4C69033208EC97F00366C5B /* SpikeFactory.swift */,
+				C4C69035208EC98F00366C5B /* Spike.swift */,
 			);
 			path = Final_Lucas_Kanabe;
 			sourceTree = "<group>";
@@ -334,8 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C69034208EC97F00366C5B /* SpikeFactory.swift in Sources */,
+				C4C6902E208EB25800366C5B /* Player.swift in Sources */,
 				C46BEA1C207E9F7100BB1712 /* GameScene.swift in Sources */,
 				C46BEA1E207E9F7100BB1712 /* GameViewController.swift in Sources */,
+				C4C69036208EC98F00366C5B /* Spike.swift in Sources */,
 				C46BEA16207E9F7100BB1712 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
