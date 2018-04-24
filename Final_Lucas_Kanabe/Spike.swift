@@ -9,14 +9,21 @@
 import SpriteKit
 import Foundation
 
-class Spike: SKSpriteNode {
+class Spike: GameObject {
+    override func initialize() {
+         name = "Spike"
+    }
+    
+    override func update() {
+        
+    }
+    
     
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         let texture = SKTexture.init(imageNamed: "spike.png")
         
         super.init(texture: texture, color: .clear, size: CGSize(width: texture.size().width * 1.25, height: texture.size().height * 1.25))
-        
-        name = "Spike"
+        initialize()
         
     }
     
