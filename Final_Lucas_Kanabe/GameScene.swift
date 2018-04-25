@@ -121,71 +121,71 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Adding Spikes
         // TO DO : PUT THIS SOMEWHERE ELSE
-        for i in stride(from: 0, to: spikes1.count, by: 1) {
-            addGameObject(_object: spikes1[i])
+        for spikes in spikes1 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes2.count, by: 1) {
-            addGameObject(_object: spikes2[i])
+        for spikes in spikes2 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes3.count, by: 1) {
-            addGameObject(_object: spikes3[i])
+        for spikes in spikes3 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes4.count, by: 1) {
-            addGameObject(_object: spikes4[i])
+        for spikes in spikes4 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes5.count, by: 1) {
-            addGameObject(_object: spikes5[i])
+        for spikes in spikes5 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes6.count, by: 1) {
-            addGameObject(_object: spikes6[i])
+        for spikes in spikes6 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes7.count, by: 1) {
-            addGameObject(_object: spikes7[i])
+        for spikes in spikes7 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes8.count, by: 1) {
-            addGameObject(_object: spikes8[i])
+        for spikes in spikes8 {
+            addGameObject(_object: spikes)
         }
         
-        for i in stride(from: 0, to: spikes9.count, by: 1) {
-            addGameObject(_object: spikes9[i])
-            spikes9[i].setFlipped()
+        for spikes in spikes9 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes10.count, by: 1) {
-            addGameObject(_object: spikes10[i])
-            spikes10[i].setFlipped()
+        for spikes in spikes10 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes11.count, by: 1) {
-            addGameObject(_object: spikes11[i])
-            spikes11[i].setFlipped()
+        for spikes in spikes11 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes13.count, by: 1) {
-            addGameObject(_object: spikes13[i])
-            spikes13[i].setFlipped()
+        for spikes in spikes13 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes14.count, by: 1) {
-            addGameObject(_object: spikes14[i])
-            spikes14[i].setFlipped()
+        for spikes in spikes14 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes15.count, by: 1) {
-            addGameObject(_object: spikes15[i])
-            spikes15[i].setFlipped()
+        for spikes in spikes15 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
         
-        for i in stride(from: 0, to: spikes16.count, by: 1) {
-            addGameObject(_object: spikes16[i])
-            spikes16[i].setFlipped()
+        for spikes in spikes16 {
+            addGameObject(_object: spikes)
+            spikes.setFlipped()
         }
     }
     
@@ -202,8 +202,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
             // If map has finished moving, let the objects know
         else {
-            for i in stride(from: 0, to: gameObjectList.count, by: 1) {
-                gameObjectList[i].setLevelEnd(_result: true)
+            for obj in gameObjectList {
+                obj.setLevelEnd(_result: true)
             }
         }
         
@@ -216,8 +216,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.handleGravity(_gravity: physicsWorld.gravity.dy)
         
         // Call our gameobject's update
-        for i in stride(from: 0, to: gameObjectList.count, by: 1) {
-           gameObjectList[i].update()
+        for obj in gameObjectList {
+           obj.update()
         }
     }
     
