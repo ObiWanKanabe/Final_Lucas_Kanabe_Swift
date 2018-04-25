@@ -20,23 +20,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let gameBottom = Map(imageNamed: "Bottom_Map.png")
     
     // Bottom Spikes
-    let spikes1: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15)
-    let spikes2: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10)
-    let spikes3: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14)
-    let spikes4: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1900, y: -110), _numberOfSpikes: 8)
-    let spikes5: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2275, y: -110), _numberOfSpikes: 8)
-    let spikes6: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1400, y: -85), _numberOfSpikes: 6)
-    let spikes7: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3)
-    let spikes8: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6)
+    var spikes1: [Spike] = []
+    var spikes2: [Spike] = []
+    var spikes3: [Spike] = []
+    var spikes4: [Spike] = []
+    var spikes5: [Spike] = []
+    var spikes6: [Spike] = []
+    var spikes7: [Spike] = []
+    var spikes8: [Spike] = []
     
     // Top Spikes
-    let spikes9: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
-    let spikes10: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 65), _numberOfSpikes: 3)
-    let spikes11: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
-    let spikes13: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10)
-    let spikes14: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
-    let spikes15: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12)
-    let spikes16: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6)
+    var spikes9: [Spike] = []
+    var spikes10: [Spike] = []
+    var spikes11: [Spike] = []
+    var spikes13: [Spike] = []
+    var spikes14: [Spike] = []
+    var spikes15: [Spike] = []
+    var spikes16: [Spike] = []
     
     // List of the GameObjects in the scene
     var gameObjectList : [GameObject] = []
@@ -67,18 +67,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Function to reset the level on loss condition
     // TO DO : FIX
     private func resetPositions() {
-        
-        player.position = CGPoint(x: -size.width/2 + 100, y: 0)
-        gameTop.position = CGPoint(x: -size.width/2 + gameTop.size.width/2, y: size.height/2 - gameTop.size.height/2 )
-        gameBottom.position = CGPoint(x: -size.width/2 + gameBottom.size.width/2, y : -size.height/2 + gameBottom.size.height/2)
-        
-        for i in stride(from: 0, to: spikes1.count, by: 1) {
-            spikes1[i].position = CGPoint(x:0 + i*7, y:0)
-        }
-        
-        for i in stride(from: 0, to: spikes2.count, by: 1) {
-            spikes2[i].position = CGPoint(x:0 + i*7, y:0)
-        }
+        removeAllChildren()
+        gameObjectList.removeAll()
+        initGame()
     }
     
     private func initGame() {
@@ -101,6 +92,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Make sure background is behind everything
         background.zPosition = -1
+        
+        // Bottom Spikes
+        spikes1 = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15)
+        spikes2 = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10)
+        spikes3 = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14)
+        spikes4 = SpikeFactory.createSpikes(_position: CGPoint(x: 1900, y: -110), _numberOfSpikes: 8)
+        spikes5 = SpikeFactory.createSpikes(_position: CGPoint(x: 2275, y: -110), _numberOfSpikes: 8)
+        spikes6 = SpikeFactory.createSpikes(_position: CGPoint(x: 1400, y: -85), _numberOfSpikes: 6)
+        spikes7 = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3)
+        spikes8 = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6)
+        
+        // Top Spikes
+        spikes9 = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
+        spikes10 = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 65), _numberOfSpikes: 3)
+        spikes11 = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
+        spikes13 = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10)
+        spikes14 = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
+        spikes15 = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12)
+        spikes16 = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6)
     
         // Our scene objects added here
         addChild(background)
