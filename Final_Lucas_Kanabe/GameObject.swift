@@ -10,7 +10,6 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-
 class GameObject : SKSpriteNode, Object{
     
     var isLevelDoneScrolling : Bool = Bool(false)

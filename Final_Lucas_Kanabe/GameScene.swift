@@ -65,8 +65,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     // Function to reset the level on loss condition
-    // TO DO : FIX
-    private func resetPositions() {
+    private func resetGame() {
         removeAllChildren()
         gameObjectList.removeAll()
         initGame()
@@ -191,7 +190,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // On contact with spikes
     func didBegin(_ contact: SKPhysicsContact) {
-        resetPositions()
+        resetGame()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -210,6 +209,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // If the player finishes the level, show the win text
         if (player.position.x > size.width/2) {
             winText.zPosition = 2
+        }
+        
+        // If the player falls behind the level, reset the game
+        if (player.position.x < -size.width/2) {
+            resetGame()
         }
         
         // Pass the gravity over to the player
