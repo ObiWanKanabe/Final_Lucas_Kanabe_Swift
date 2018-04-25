@@ -30,6 +30,7 @@
 		C46BEA4E207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
 		C46BEA4F207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
 		C46BEA50207EA15400BB1712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */; };
+		C486D8F2209120E8002A19E7 /* GravityParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C486D8F1209120E8002A19E7 /* GravityParticle.sks */; };
 		C4A13FC4208FB23400E4B948 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A13FC3208FB23400E4B948 /* GameObject.swift */; };
 		C4A13FC6208FB52F00E4B948 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A13FC5208FB52E00E4B948 /* Object.swift */; };
 		C4A13FC8208FC71B00E4B948 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A13FC7208FC71B00E4B948 /* Map.swift */; };
@@ -86,6 +87,7 @@
 		C46BEA3B207E9F7100BB1712 /* Final_Lucas_KanabeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Lucas_KanabeUITests.swift; sourceTree = "<group>"; };
 		C46BEA3D207E9F7100BB1712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46BEA4D207EA15400BB1712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C486D8F1209120E8002A19E7 /* GravityParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GravityParticle.sks; sourceTree = "<group>"; };
 		C4A13FC3208FB23400E4B948 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		C4A13FC5208FB52E00E4B948 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		C4A13FC7208FC71B00E4B948 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				C4A13FC5208FB52E00E4B948 /* Object.swift */,
 				C4A13FC7208FC71B00E4B948 /* Map.swift */,
 				C43C6D302091070A003AA513 /* Animation.swift */,
+				C486D8F1209120E8002A19E7 /* GravityParticle.sks */,
 			);
 			path = Final_Lucas_Kanabe;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				C46BEA26207E9F7100BB1712 /* LaunchScreen.storyboard in Resources */,
 				C46BEA1A207E9F7100BB1712 /* Actions.sks in Resources */,
 				C46BEA4E207EA15400BB1712 /* GoogleService-Info.plist in Resources */,
+				C486D8F2209120E8002A19E7 /* GravityParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

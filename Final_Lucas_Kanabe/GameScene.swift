@@ -71,6 +71,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initGame()
     }
     
+    private func spawnParticleEffect(_position: CGPoint){
+        let particle = SKEmitterNode(fileNamed: "GravityParticle.sks")
+        particle?.name = "test"
+        particle?.position = _position
+        particle?.targetNode = self
+        addChild(particle!)
+    }
+    
     private func initGame() {
         
         // Set the Physics World contact delegate
@@ -93,23 +101,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -1
         
         // Bottom Spikes
-        spikes1 = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15)
-        spikes2 = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10)
-        spikes3 = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14)
-        spikes4 = SpikeFactory.createSpikes(_position: CGPoint(x: 1900, y: -110), _numberOfSpikes: 8)
-        spikes5 = SpikeFactory.createSpikes(_position: CGPoint(x: 2275, y: -110), _numberOfSpikes: 8)
-        spikes6 = SpikeFactory.createSpikes(_position: CGPoint(x: 1400, y: -85), _numberOfSpikes: 6)
-        spikes7 = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3)
-        spikes8 = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6)
+        spikes1 = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15, _flipped: false)
+        spikes2 = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10, _flipped: false)
+        spikes3 = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14, _flipped: false)
+        spikes4 = SpikeFactory.createSpikes(_position: CGPoint(x: 1900, y: -110), _numberOfSpikes: 8, _flipped: false)
+        spikes5 = SpikeFactory.createSpikes(_position: CGPoint(x: 2275, y: -110), _numberOfSpikes: 8, _flipped: false)
+        spikes6 = SpikeFactory.createSpikes(_position: CGPoint(x: 1400, y: -85), _numberOfSpikes: 6, _flipped: false)
+        spikes7 = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3, _flipped: false)
+        spikes8 = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6, _flipped: false)
         
         // Top Spikes
-        spikes9 = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
-        spikes10 = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 60), _numberOfSpikes: 3)
-        spikes11 = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
-        spikes13 = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10)
-        spikes14 = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
-        spikes15 = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12)
-        spikes16 = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6)
+        spikes9 = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20, _flipped: true)
+        spikes10 = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 60), _numberOfSpikes: 3, _flipped: true)
+        spikes11 = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18, _flipped: true)
+        spikes13 = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10, _flipped: true)
+        spikes14 = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15, _flipped: true)
+        spikes15 = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12, _flipped: true)
+        spikes16 = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6, _flipped: true)
     
         // Our scene objects added here
         addChild(background)
@@ -154,37 +162,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for spikes in spikes9 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes10 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes11 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes13 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes14 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes15 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
         
         for spikes in spikes16 {
             addGameObject(_object: spikes)
-            spikes.setFlipped()
         }
     }
     
@@ -230,6 +231,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // Change scene gravity if left side of screen has been pressed
            if (touch.location(in: self).x < 0) {
             physicsWorld.gravity.dy = -physicsWorld.gravity.dy
+            spawnParticleEffect(_position: CGPoint(x: -size.width/4, y: 0))
             }
             
             // Pass touch begin locations to player

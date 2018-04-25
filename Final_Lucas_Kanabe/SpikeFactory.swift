@@ -19,10 +19,14 @@ class SpikeFactory {
     }
     
     // Create spikes from the position and using the number of spikes given
-    static func createSpikes(_position: CGPoint, _numberOfSpikes: Int) -> [Spike] {
+    static func createSpikes(_position: CGPoint, _numberOfSpikes: Int, _flipped: Bool) -> [Spike] {
         var spikes: [Spike] = []
         for i in stride(from: 0, to: _numberOfSpikes, by: 1) {
-            spikes.append(generateSpike(_position: CGPoint(x: _position.x + CGFloat(i*7), y: _position.y)))
+            let spike : Spike = generateSpike(_position: CGPoint(x: _position.x + CGFloat(i*7), y: _position.y))
+            if (_flipped == true) {
+            spike.setFlipped()
+            }
+            spikes.append(spike)
         }
         return spikes
     }
