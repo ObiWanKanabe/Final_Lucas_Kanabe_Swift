@@ -10,23 +10,15 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-struct Animation {
-    var textures: [SKTexture]?
-    var frameTime: Double?
-    
-    func getAction() -> SKAction{
-        let animation = SKAction.animate(with: textures!, timePerFrame: frameTime!)
-        return animation
-    }
-    
-    func getRepeatedAction() -> SKAction{
-        let animation = SKAction.animate(with: textures!, timePerFrame: frameTime!)
-        let repeatAnimation = SKAction.repeatForever(animation)
-        return repeatAnimation
-    }
-}
 
 class GameObject : SKSpriteNode, Object{
+    
+    var isLevelDoneScrolling : Bool = Bool(false)
+    
     func update() {}
-    func initialize(){}  
+    func initialize(){}
+    
+    func setLevelEnd(_result : Bool) {
+        isLevelDoneScrolling = _result
+    }
 }

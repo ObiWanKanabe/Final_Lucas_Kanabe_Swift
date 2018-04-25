@@ -19,10 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let gameTop = Map(imageNamed: "Top_Map.png")
     let gameBottom = Map(imageNamed: "Bottom_Map.png")
     
-    var isMoving = Bool(false)
-    
-    var gameObjectList : [GameObject] = []
-    
+    // Bottom Spikes
     let spikes1: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15)
     let spikes2: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10)
     let spikes3: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14)
@@ -32,6 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let spikes7: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3)
     let spikes8: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6)
     
+    // Top Spikes
     let spikes9: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
     let spikes10: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 65), _numberOfSpikes: 3)
     let spikes11: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
@@ -39,6 +37,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let spikes14: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
     let spikes15: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12)
     let spikes16: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6)
+    
+    // List of the GameObjects in the scene
+    var gameObjectList : [GameObject] = []
+    
+    // Win Text (behind the background for now)
+    lazy var winText: SKLabelNode = {
+        var text = SKLabelNode(fontNamed: "Arial")
+        text.fontSize = CGFloat(75)
+        text.zPosition = -2
+        text.color = SKColor.white
+        text.horizontalAlignmentMode = .center
+        text.verticalAlignmentMode = .bottom
+        text.text = "YOU WIN!"
+        return text
+    }()
     
     override func didMove(to view: SKView) {
         // Init objects and properties
@@ -51,7 +64,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(_object)
     }
     
+    // Function to reset the level on loss condition
+    // TO DO : FIX
     private func resetPositions() {
+        
         player.position = CGPoint(x: -size.width/2 + 100, y: 0)
         gameTop.position = CGPoint(x: -size.width/2 + gameTop.size.width/2, y: size.height/2 - gameTop.size.height/2 )
         gameBottom.position = CGPoint(x: -size.width/2 + gameBottom.size.width/2, y : -size.height/2 + gameBottom.size.height/2)
@@ -66,7 +82,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func initGame() {
-        view?.showsPhysics = true
+        
+        // Set the Physics World contact delegate
         physicsWorld.contactDelegate = self
         
         // Set Player position and let it know what the screen bounds are
@@ -87,10 +104,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
         // Our scene objects added here
         addChild(background)
+        addChild(winText)
         addGameObject(_object: gameBottom)
         addGameObject(_object: gameTop)
         addGameObject(_object: player)
         
+        // Adding Spikes
+        // TO DO : PUT THIS SOMEWHERE ELSE
         for i in stride(from: 0, to: spikes1.count, by: 1) {
             addGameObject(_object: spikes1[i])
         }
@@ -159,6 +179,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    // On contact with spikes
     func didBegin(_ contact: SKPhysicsContact) {
         resetPositions()
     }
@@ -169,71 +190,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Checking if the map has reached the end, if not then move it
         if (gameTop.position.x + gameTop.size.width/2 > size.width/2) {
         }
-            // If map has finished moving, let the player know
+            // If map has finished moving, let the objects know
         else {
-            gameTop.setLevelEnd()
-            gameBottom.setLevelEnd()
-            player.setLevelEnd()
-            for i in stride(from: 0, to: spikes1.count, by: 1) {
-                spikes1[i].setLevelEnd()
+            for i in stride(from: 0, to: gameObjectList.count, by: 1) {
+                gameObjectList[i].setLevelEnd(_result: true)
             }
-            
-            for i in stride(from: 0, to: spikes2.count, by: 1) {
-                spikes2[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes3.count, by: 1) {
-                spikes3[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes4.count, by: 1) {
-                spikes4[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes5.count, by: 1) {
-                spikes5[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes6.count, by: 1) {
-                spikes6[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes7.count, by: 1) {
-                spikes7[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes8.count, by: 1) {
-                spikes8[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes9.count, by: 1) {
-                spikes9[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes10.count, by: 1) {
-                spikes10[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes11.count, by: 1) {
-                spikes11[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes13.count, by: 1) {
-                spikes13[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes14.count, by: 1) {
-                spikes14[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes15.count, by: 1) {
-                spikes15[i].setLevelEnd()
-            }
-            
-            for i in stride(from: 0, to: spikes16.count, by: 1) {
-                spikes16[i].setLevelEnd()
-            }
-            
+        }
+        
+        // If the player finishes the level, show the win text
+        if (player.position.x > size.width/2) {
+            winText.zPosition = 2
         }
         
         // Pass the gravity over to the player

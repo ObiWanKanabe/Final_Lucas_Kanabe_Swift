@@ -11,12 +11,14 @@ import SpriteKit
 
 class SpikeFactory {
     
-    static func generateSpike(_position: CGPoint) -> Spike{
+    // Generation of one single spike
+    private static func generateSpike(_position: CGPoint) -> Spike{
         let spike = Spike()
         spike.position = _position
         return spike
     }
     
+    // Create spikes from the position and using the number of spikes given
     static func createSpikes(_position: CGPoint, _numberOfSpikes: Int) -> [Spike] {
         var spikes: [Spike] = []
         for i in stride(from: 0, to: _numberOfSpikes, by: 1) {

@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
+// Enum to control animations of the player
 enum MovementState {
     case STILL
     case FOLLOWING
@@ -18,20 +19,23 @@ enum MovementState {
 
 class Player: GameObject {
     
+    // Gravity change flips
     let spriteFlipUp = SKAction.scale(to: CGSize(width: 40, height: -50), duration: 0.3)
     let spriteFlipDown = SKAction.scale(to: CGSize(width: 40, height: 50), duration: 0.3)
     
+    // Player is following the map scroll by default
     var movement = MovementState.FOLLOWING
     
+    // The textures of the idle and movement animations
     var idleTextures: [SKTexture] = []
     var moveTextures: [SKTexture] = []
     
+    // The 3 animation struct types
     var idleAnimation : Animation = Animation()
     var moveAnimation : Animation = Animation()
     var runAnimation : Animation = Animation()
     
-    var isLevelDone : Bool = Bool(false)
-    
+    // The screen bounds so the player does not go off screen
     var screenBoundRight = CGFloat()
     var screenBoundLeft = CGFloat()
     
@@ -42,9 +46,11 @@ class Player: GameObject {
         initialize()
     }
     
+    // Initialization here
     override func initialize() {
         
         name = "Player"
+        
         idleTextures = [SKTexture(imageNamed: "stickManIdle1white.png"),
                         SKTexture(imageNamed: "stickManIdle2white.png")]
     
@@ -63,34 +69,40 @@ class Player: GameObject {
         physicsBody?.usesPreciseCollisionDetection = true
         
         physicsBody?.categoryBitMask = 0
+        // Setting contact bit mask to be notified about spike contact
         physicsBody?.contactTestBitMask = 2
         
         self.run(moveAnimation.getRepeatedAction())
     }
     
+    // Update is called every frame
     override func update() {
+        // Force the physics body velocity on movement and following
         if (movement == MovementState.MOVING) {
             physicsBody?.velocity.dx = CGFloat(100)
         } else if (movement == MovementState.FOLLOWING){
             physicsBody?.velocity.dx = CGFloat(0)
-        } else if (movement == MovementState.STILL) {
         }
         
-        if (physicsBody?.velocity.dx == CGFloat(0) && isLevelDone) {
+        // One level is done, set the player still
+        if (physicsBody?.velocity.dx == CGFloat(0) && isLevelDoneScrolling) {
             setStill()
         }
         
-        if (position.x >= screenBoundRight - size.width/2 && !isLevelDone) {
+        // Force player inside screen bounds while level is still scrolling
+        if (position.x >= screenBoundRight - size.width/2 && !isLevelDoneScrolling) {
             position.x = screenBoundRight - size.width/2
         }
         
     }
     
+    // Store the screen bounds
     func setScreenbounds(_leftX: CGFloat, _rightX: CGFloat) {
         screenBoundLeft = _leftX
         screenBoundRight = _rightX
     }
     
+    // State setters
     func setMoving() {
         movement = MovementState.MOVING
         physicsBody?.velocity.dx = CGFloat(100)
@@ -108,20 +120,21 @@ class Player: GameObject {
         self.run(idleAnimation.getRepeatedAction())
     }
     
-    func setLevelEnd() {
-        isLevelDone = true
-    }
-    
+    // Handle touch begin
     func handleTouchesBegin (_position: CGPoint) {
+        // If right side of sreen is pressed, Player is moving
         if (_position.x > 0) {
             setMoving()
         }
     }
     
+    // Handle touch end
     func handleTouchesEnd () {
+        // Once nothing is pressed, Player is following
         setFollowing()
     }
     
+    // Flip the sprite dependent on gravity
     func handleGravity (_gravity: CGFloat) {
         if (_gravity > 0) {
             run(spriteFlipUp)

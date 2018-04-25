@@ -12,14 +12,13 @@ import GameplayKit
 
 class Map : GameObject {
     
-     var isLevelDone : Bool = Bool(false)
-    
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         super.init(texture: texture, color: .clear, size: CGSize(width: (texture?.size().width)! * 1.25, height: (texture?.size().height)! * 1.25))
         
         initialize()
     }
     
+    // Initialization here
     override func initialize() {
         
         name = "Map"
@@ -34,12 +33,10 @@ class Map : GameObject {
         
     }
     
-    func setLevelEnd() {
-        isLevelDone = true
-    }
-    
+    // Update is called every frame
     override func update() {
-        if (!isLevelDone) {
+        // Scroll the map
+        if (!isLevelDoneScrolling) {
         position = CGPoint(x: position.x - 3, y: position.y)
         }
     }
