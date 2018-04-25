@@ -105,7 +105,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Top Spikes
         spikes9 = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
-        spikes10 = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 65), _numberOfSpikes: 3)
+        spikes10 = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 60), _numberOfSpikes: 3)
         spikes11 = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
         spikes13 = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10)
         spikes14 = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
