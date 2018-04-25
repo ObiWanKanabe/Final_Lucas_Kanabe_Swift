@@ -10,12 +10,17 @@ import SpriteKit
 import Foundation
 
 class Spike: GameObject {
+    
+    var isLevelDone : Bool = Bool(false)
+    
     override func initialize() {
          name = "Spike"
     }
     
     override func update() {
-        position = CGPoint(x: position.x - 3, y: position.y )
+        if (!isLevelDone) {
+            position = CGPoint(x: position.x - 3, y: position.y)
+        }
     }
     
     
@@ -34,6 +39,14 @@ class Spike: GameObject {
         physicsBody?.categoryBitMask = 2
         physicsBody?.contactTestBitMask = 0
         
+    }
+    
+    func setFlipped() {
+        scale(to: CGSize(width: 7 * 1.75, height: -8 * 1.75))
+    }
+    
+    func setLevelEnd() {
+        isLevelDone = true
     }
     
     required init?(coder aDecoder: NSCoder) {

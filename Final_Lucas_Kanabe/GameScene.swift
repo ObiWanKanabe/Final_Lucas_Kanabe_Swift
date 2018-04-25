@@ -23,7 +23,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var gameObjectList : [GameObject] = []
     
-     let spikes1: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 0, y: 0), _numberOfSpikes: 5)
+    let spikes1: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 20, y: -135), _numberOfSpikes: 15)
+    let spikes2: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 675, y: -135), _numberOfSpikes: 10)
+    let spikes3: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1015, y: -110), _numberOfSpikes: 14)
+    let spikes4: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1900, y: -110), _numberOfSpikes: 8)
+    let spikes5: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2275, y: -110), _numberOfSpikes: 8)
+    let spikes6: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1400, y: -85), _numberOfSpikes: 6)
+    let spikes7: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1850, y: -85), _numberOfSpikes: 3)
+    let spikes8: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2200, y: -85), _numberOfSpikes: 6)
+    
+    let spikes9: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: -200, y: 135), _numberOfSpikes: 20)
+    let spikes10: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 950, y: 65), _numberOfSpikes: 3)
+    let spikes11: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 725, y: 135), _numberOfSpikes: 18)
+    let spikes13: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 275, y: 110), _numberOfSpikes: 10)
+    let spikes14: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15)
+    let spikes15: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12)
+    let spikes16: [Spike] = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6)
     
     override func didMove(to view: SKView) {
         // Init objects and properties
@@ -44,6 +59,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for i in stride(from: 0, to: spikes1.count, by: 1) {
             spikes1[i].position = CGPoint(x:0 + i*7, y:0)
         }
+        
+        for i in stride(from: 0, to: spikes2.count, by: 1) {
+            spikes2[i].position = CGPoint(x:0 + i*7, y:0)
+        }
     }
     
     private func initGame() {
@@ -56,7 +75,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Set the map halves position
         gameTop.position = CGPoint(x: -size.width/2 + gameTop.size.width/2, y: size.height/2 - gameTop.size.height/2 )
+        gameTop.zPosition = 1
         gameBottom.position = CGPoint(x: -size.width/2 + gameBottom.size.width/2, y : -size.height/2 + gameBottom.size.height/2)
+        gameBottom.zPosition = 1
         
         // Set gravity to be a little lower but normal direction downward to start
         physicsWorld.gravity = CGVector(dx: 0, dy: -5)
@@ -69,8 +90,72 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addGameObject(_object: gameBottom)
         addGameObject(_object: gameTop)
         addGameObject(_object: player)
+        
         for i in stride(from: 0, to: spikes1.count, by: 1) {
             addGameObject(_object: spikes1[i])
+        }
+        
+        for i in stride(from: 0, to: spikes2.count, by: 1) {
+            addGameObject(_object: spikes2[i])
+        }
+        
+        for i in stride(from: 0, to: spikes3.count, by: 1) {
+            addGameObject(_object: spikes3[i])
+        }
+        
+        for i in stride(from: 0, to: spikes4.count, by: 1) {
+            addGameObject(_object: spikes4[i])
+        }
+        
+        for i in stride(from: 0, to: spikes5.count, by: 1) {
+            addGameObject(_object: spikes5[i])
+        }
+        
+        for i in stride(from: 0, to: spikes6.count, by: 1) {
+            addGameObject(_object: spikes6[i])
+        }
+        
+        for i in stride(from: 0, to: spikes7.count, by: 1) {
+            addGameObject(_object: spikes7[i])
+        }
+        
+        for i in stride(from: 0, to: spikes8.count, by: 1) {
+            addGameObject(_object: spikes8[i])
+        }
+        
+        for i in stride(from: 0, to: spikes9.count, by: 1) {
+            addGameObject(_object: spikes9[i])
+            spikes9[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes10.count, by: 1) {
+            addGameObject(_object: spikes10[i])
+            spikes10[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes11.count, by: 1) {
+            addGameObject(_object: spikes11[i])
+            spikes11[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes13.count, by: 1) {
+            addGameObject(_object: spikes13[i])
+            spikes13[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes14.count, by: 1) {
+            addGameObject(_object: spikes14[i])
+            spikes14[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes15.count, by: 1) {
+            addGameObject(_object: spikes15[i])
+            spikes15[i].setFlipped()
+        }
+        
+        for i in stride(from: 0, to: spikes16.count, by: 1) {
+            addGameObject(_object: spikes16[i])
+            spikes16[i].setFlipped()
         }
     }
     
@@ -86,7 +171,69 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
             // If map has finished moving, let the player know
         else {
+            gameTop.setLevelEnd()
+            gameBottom.setLevelEnd()
             player.setLevelEnd()
+            for i in stride(from: 0, to: spikes1.count, by: 1) {
+                spikes1[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes2.count, by: 1) {
+                spikes2[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes3.count, by: 1) {
+                spikes3[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes4.count, by: 1) {
+                spikes4[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes5.count, by: 1) {
+                spikes5[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes6.count, by: 1) {
+                spikes6[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes7.count, by: 1) {
+                spikes7[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes8.count, by: 1) {
+                spikes8[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes9.count, by: 1) {
+                spikes9[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes10.count, by: 1) {
+                spikes10[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes11.count, by: 1) {
+                spikes11[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes13.count, by: 1) {
+                spikes13[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes14.count, by: 1) {
+                spikes14[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes15.count, by: 1) {
+                spikes15[i].setLevelEnd()
+            }
+            
+            for i in stride(from: 0, to: spikes16.count, by: 1) {
+                spikes16[i].setLevelEnd()
+            }
+            
         }
         
         // Pass the gravity over to the player

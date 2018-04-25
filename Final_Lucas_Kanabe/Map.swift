@@ -12,6 +12,8 @@ import GameplayKit
 
 class Map : GameObject {
     
+     var isLevelDone : Bool = Bool(false)
+    
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         super.init(texture: texture, color: .clear, size: CGSize(width: (texture?.size().width)! * 1.25, height: (texture?.size().height)! * 1.25))
         
@@ -32,8 +34,14 @@ class Map : GameObject {
         
     }
     
+    func setLevelEnd() {
+        isLevelDone = true
+    }
+    
     override func update() {
+        if (!isLevelDone) {
         position = CGPoint(x: position.x - 3, y: position.y)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
