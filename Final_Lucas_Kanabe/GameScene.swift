@@ -193,7 +193,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Call our gameobject's update
         for obj in gameObjectList {
-           obj.update()
+           obj.update(_currentTime: currentTime)
         }
     }
     

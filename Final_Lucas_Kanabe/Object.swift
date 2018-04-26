@@ -7,7 +7,11 @@
 //
 
 // The base object protocol to ensure every single object has an initialize and update function
+
+import SpriteKit
+
 protocol Object{
+    
     func initialize()
-    func update()
+    func update(_currentTime: TimeInterval)
 }

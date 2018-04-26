@@ -76,7 +76,8 @@ class Player: GameObject {
     }
     
     // Update is called every frame
-    override func update() {
+    override func update(_currentTime: TimeInterval) {
+        super.update(_currentTime: _currentTime)
         // Force the physics body velocity on movement and following
         if (movement == MovementState.MOVING) {
             physicsBody?.velocity.dx = CGFloat(100)

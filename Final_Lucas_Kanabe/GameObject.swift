@@ -14,7 +14,19 @@ class GameObject : SKSpriteNode, Object{
     
     var isLevelDoneScrolling : Bool = Bool(false)
     
-    func update() {}
+    var deltaTime: TimeInterval = 0.0
+    private var lastUpdateTime: TimeInterval?
+    
+    func update(_currentTime: TimeInterval) {
+        guard let lastUpdateTime = lastUpdateTime else {
+            self.lastUpdateTime = _currentTime
+            return
+        }
+        
+        deltaTime = _currentTime - lastUpdateTime
+        
+        self.lastUpdateTime = _currentTime
+    }
     func initialize(){}
     
     func setLevelEnd(_result : Bool) {

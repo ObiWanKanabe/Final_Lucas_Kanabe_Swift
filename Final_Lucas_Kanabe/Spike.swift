@@ -36,10 +36,11 @@ class Spike: GameObject {
     }
     
     // Update is called every frame
-    override func update() {
+    override func update(_currentTime: TimeInterval) {
+        super.update(_currentTime: _currentTime)
         // Scroll the spikes with the map
         if (!isLevelDoneScrolling) {
-            position = CGPoint(x: position.x - 3, y: position.y)
+            position = CGPoint(x: position.x - CGFloat(100 * deltaTime), y: position.y)
         }
     }
     
