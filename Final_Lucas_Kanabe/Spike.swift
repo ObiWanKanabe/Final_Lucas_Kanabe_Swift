@@ -17,6 +17,7 @@ class Spike: GameObject {
         super.init(texture: texture, color: .clear, size: CGSize(width: texture.size().width * 1.75, height: texture.size().height * 1.75))
         
         initialize()
+    
     }
     
     // Initialization here

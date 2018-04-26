@@ -31,13 +31,13 @@ class Player: GameObject {
     var moveTextures: [SKTexture] = []
     
     // The 3 animation struct types
-    var idleAnimation : Animation = Animation()
-    var moveAnimation : Animation = Animation()
-    var runAnimation : Animation = Animation()
+    private var idleAnimation : Animation = Animation()
+    private var moveAnimation : Animation = Animation()
+    private var runAnimation : Animation = Animation()
     
     // The screen bounds so the player does not go off screen
-    var screenBoundRight = CGFloat()
-    var screenBoundLeft = CGFloat()
+    private var screenBoundRight = CGFloat()
+    private var screenBoundLeft = CGFloat()
     
     override init(texture: SKTexture?, color: UIColor, size: CGSize) {
         let texture = SKTexture.init(imageNamed: "stickMan1white.png")
@@ -61,7 +61,7 @@ class Player: GameObject {
         
         idleAnimation = Animation(textures: idleTextures, frameTime: 0.5)
         moveAnimation = Animation(textures: moveTextures, frameTime: 0.25)
-        runAnimation = Animation(textures: moveTextures, frameTime: 0.15)
+        runAnimation = Animation(textures: moveTextures, frameTime: 0.10)
         
         physicsBody = SKPhysicsBody(texture: texture!, size: size)
         physicsBody?.allowsRotation = false

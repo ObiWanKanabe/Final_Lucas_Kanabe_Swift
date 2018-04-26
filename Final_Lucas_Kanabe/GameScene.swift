@@ -15,7 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let background = SKSpriteNode(imageNamed:"background.png")
     
     // GameObjects
-    let player = Player()
+    var player: Player = Player()
     let gameTop = Map(imageNamed: "Top_Map.png")
     let gameBottom = Map(imageNamed: "Bottom_Map.png")
     
@@ -37,6 +37,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var spikes14: [Spike] = []
     var spikes15: [Spike] = []
     var spikes16: [Spike] = []
+    
+    // Our particle effect
+    // TO DO : Figure out a way to display it once since reset simulation isn't reliable
+    var gravityParticle: SKEmitterNode = SKEmitterNode()
     
     // List of the GameObjects in the scene
     var gameObjectList : [GameObject] = []
@@ -64,6 +68,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(_object)
     }
     
+    private func addGameObjects(_objects: [GameObject]) {
+        for obj in _objects {
+            gameObjectList.append(obj)
+            addChild(obj)
+        }
+    }
+    
     // Function to reset the level on loss condition
     private func resetGame() {
         removeAllChildren()
@@ -71,15 +82,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initGame()
     }
     
-    private func spawnParticleEffect(_position: CGPoint){
-        let particle = SKEmitterNode(fileNamed: "GravityParticle.sks")
+    // Spawns a particle effect using the given file name and positionx
+    private func spawnParticleEffect(_position: CGPoint, _fileName: String) -> SKEmitterNode{
+        let particle = SKEmitterNode(fileNamed: _fileName)
         particle?.name = "test"
         particle?.position = _position
         particle?.targetNode = self
         addChild(particle!)
+        return particle!
     }
     
+    
     private func initGame() {
+        
+        player = Player()
         
         // Set the Physics World contact delegate
         physicsWorld.contactDelegate = self
@@ -118,6 +134,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spikes14 = SpikeFactory.createSpikes(_position: CGPoint(x: 1200, y: 110), _numberOfSpikes: 15, _flipped: true)
         spikes15 = SpikeFactory.createSpikes(_position: CGPoint(x: 2050, y: 110), _numberOfSpikes: 12, _flipped: true)
         spikes16 = SpikeFactory.createSpikes(_position: CGPoint(x: 2450, y: 60), _numberOfSpikes: 6, _flipped: true)
+        
+        gravityParticle = spawnParticleEffect(_position: CGPoint(x: -100, y: 0), _fileName: "GravityParticle.sks")
     
         // Our scene objects added here
         addChild(background)
@@ -125,68 +143,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addGameObject(_object: gameBottom)
         addGameObject(_object: gameTop)
         addGameObject(_object: player)
-        
-        // Adding Spikes
-        // TO DO : PUT THIS SOMEWHERE ELSE
-        for spikes in spikes1 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes2 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes3 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes4 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes5 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes6 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes7 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes8 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes9 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes10 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes11 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes13 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes14 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes15 {
-            addGameObject(_object: spikes)
-        }
-        
-        for spikes in spikes16 {
-            addGameObject(_object: spikes)
-        }
+        addGameObjects(_objects: spikes1)
+        addGameObjects(_objects: spikes2)
+        addGameObjects(_objects: spikes3)
+        addGameObjects(_objects: spikes4)
+        addGameObjects(_objects: spikes5)
+        addGameObjects(_objects: spikes6)
+        addGameObjects(_objects: spikes7)
+        addGameObjects(_objects: spikes8)
+        addGameObjects(_objects: spikes9)
+        addGameObjects(_objects: spikes10)
+        addGameObjects(_objects: spikes11)
+        addGameObjects(_objects: spikes13)
+        addGameObjects(_objects: spikes14)
+        addGameObjects(_objects: spikes15)
+        addGameObjects(_objects: spikes16)
     }
     
     // On contact with spikes
@@ -231,7 +202,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // Change scene gravity if left side of screen has been pressed
            if (touch.location(in: self).x < 0) {
             physicsWorld.gravity.dy = -physicsWorld.gravity.dy
-            spawnParticleEffect(_position: CGPoint(x: -size.width/4, y: 0))
+            // gravityParticle.resetSimulation() // This function is extremely slow so we're scrapping it for now
             }
             
             // Pass touch begin locations to player
